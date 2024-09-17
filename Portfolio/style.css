@@ -1,0 +1,1070 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+/* Main*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: pink;
+    color: black;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Home Page Styling */
+.Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url('bini-bg.png'); 
+    background-attachment: fixed;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    padding: 0 2rem;
+    color: blanchedalmond; 
+}
+
+
+.home-img img {
+    border-radius: 50%;
+    width: 20rem; 
+    height: 20rem;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.home-content h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #333;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.home-content span {
+    color: #a81681; 
+}
+
+.home-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.home-content p {
+    font-size: 1.8rem;
+    color: #444;
+    max-width: 700px; 
+    margin-bottom: 2rem;
+}
+.Social-icons a {
+    font-size: 2.5rem;
+    margin: 0 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.Social-icons a:hover {
+    color: #a81681;
+}
+
+.home-content .btn {
+    padding: 1.2rem 2.5rem;
+    background-color: #a81681;
+    color: white;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.home-content .btn:hover {
+    background-color: darkcyan;
+}
+/* pertdolio design */
+.portfolio-header {
+    font-size: 48px; 
+    font-weight: bold;
+    color: #a81681; 
+    text-align: center; 
+    background: linear-gradient(90deg, lightblue 0%, lightpink 100%); 
+    padding: 20px 0;
+    border-radius: 10px; 
+    margin-top: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    font-family: Arial, sans-serif; 
+}
+
+/* Portfolio Section Styling in home page */
+/* General styling for container */
+.home-portfolio {
+    padding: 50px 0;
+    text-align: center;
+    background-image: url(bg-port.jpg);
+}
+
+.home-portfolio h1 {
+    font-size: 32px; /* Adjusted font-size for better fit */
+font-weight: bold;
+color: white; /* White text to contrast with the pink background */
+text-align: center;
+background-image: url(bini-bg.png); /* Aesthetic soft pink background */
+padding: 20px 0; /* Adjusted padding for a tighter fit */
+border-radius: 5px; /* Rounded corners for a softer look */
+margin-top: -20px; /* Space at the top */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Light shadow for a subtle lift effect */
+font-family: 'Buffalo', sans-serif; /* Elegant and clean font */
+letter-spacing: 1.5px; /* Slight spacing between letters for modern aesthetic */
+max-width: 80%; /* Set a max width to control how wide the block can be */
+margin-left: auto; /* Center align the block */
+margin-right: auto; /* Center align the block */
+
+}
+
+/* Grid layout */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Portfolio item design */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay with hover effect */
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(168, 22, 129, 0.8);
+    color: white;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.4s ease;
+    border-radius: 10px;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+/* Portfolio item title and description */
+.portfolio-overlay h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    color:white;
+}
+
+.portfolio-overlay p {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: whitesmoke;
+}
+
+/* General button styling for portfolio */
+.styled-button {
+    background-color: #a81681;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+.styled-button:hover {
+    background-color: #7f105d;
+}
+
+
+/* Updated Menu Tab Design */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 9%;
+    background-color: rgba(255, 255, 255, 0.9); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+nav a {
+    font-size: 2rem; 
+    color: #333;
+    margin-left: 3rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem; 
+    background-color: transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #a81681; 
+    color: white;
+    border: 2px solid darkcyan;
+}
+
+
+/* About Scroll Section */
+.about-scroll {
+    padding: 5rem 9%;
+    background-color: pink ;
+    color: black;
+    text-align: center;
+}
+
+.about-scroll h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.about-scroll p {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;  
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 5rem 9%;
+    background-image: url(bg-port.jpg);
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.portfolio-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    background-color: pink;
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.portfolio-item h3 {
+    margin-top: 1.5rem;
+    font-size: 2.2rem;
+}
+
+.portfolio-item p {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/*   Section */
+.contact-section {
+    padding: 5rem 9%;
+    background-color: lightpink;
+    color: black;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info {
+    margin-bottom: 4rem;
+}
+
+.contact-info p {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+.contact-section {
+    padding: 5rem 10%;
+    background-image: url('bg-contact.png');
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    text-align: center;
+    min-height: 100vh;      
+
+}
+
+
+.contact-section h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact-info p {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    margin-top: 3rem;
+    background-color: blanchedalmond;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.contact-form button {
+    padding: 1rem 2rem;
+    background-color: #a81681;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: darkcyan;
+}
+
+/* Social Media Icons */
+.social-icons {
+    padding: 3rem 0;
+    background-color: pink;
+    text-align: center;
+}
+
+.social-icons h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.socialmedia-contact a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.socialmedia-contact a:hover {
+    color: #a81681;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.contact-form button {
+    padding: 1rem 2rem;
+    background-color: #a81681;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: darkcyan;
+}
+
+/* Social Icons */
+.Social-icons {
+    margin-top: 2rem;
+}
+
+.Social-icons a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.Social-icons a:hover {
+    color: #a81681;
+}
+
+/* About Section */
+.about-section {
+    padding: 5rem 9%;
+    background-image: url(bg-port.jpg); 
+     background-attachment: fixed;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(pink-about.jpg);
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 5rem;
+}
+
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.05);
+}
+
+.about-content {
+    flex: 2;
+    text-align: left;
+}
+
+.about-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #a81681;
+}
+
+.about-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: darkcyan;
+}
+
+.about-content p {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-content .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #a81681;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.about-content .btn:hover {
+    background-color: darkcyan;
+}
+/* For responsive*/
+/* Media Queries */
+@media (max-width: 1200px) {
+    html {
+        font-size: 56.25%; 
+    }
+    .logo {
+        font-size: 2.5rem;
+    }
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        padding: 1rem;
+        background-color: pink;
+        display: none;
+    }
+    nav.active {
+        display: block;
+    }
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    section {
+        min-height: 100vh;
+        padding: 5rem 9%;
+    }
+    .home-content h1 {
+        font-size: 3rem;
+    }
+    .home-content h3 {
+        font-size: 2rem;
+    }
+    .home-img img {
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-img {
+        margin-bottom: 3rem;
+    }
+    .about-content h1,
+    .about-content h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%; 
+    }
+}
+.Me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 9%;
+    background-color: #a81681; 
+    color: white;
+}
+
+.Me h4 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.Me p {
+    font-size: 1.8rem;
+    max-width: 800px;
+    line-height: 1.6;
+    color: blanchedalmond;
+}
+
+.Me:hover h4 {
+    color: lightpink; 
+}
+
+@media (max-width: 768px) {
+    .Me h4 {
+        font-size: 2.5rem;
+    }
+
+    .Me p {
+        font-size: 1.6rem;
+    }
+}
+/* for pic sliding */
+
+.Pic-container {
+    width: 100%;
+    height: 300px; /* Adjusted height */
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    background-image: url(bias.png);
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image within the container */
+}
+/* Image container */
+.pic-img {
+    display: flex;
+    width: 300%;
+    animation: slide 20s ease-in-out infinite; 
+    
+}
+
+/* Each image */
+.pic-img img {
+    width: 33.33%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Keyframes for sliding back-and-forth effect */
+@keyframes slide {
+    0% { 
+        transform: translateX(0); 
+    }
+    50% { 
+        transform: translateX(-100%); 
+    }
+    100% { 
+        transform: translateX(0); 
+    }
+}
+
+
+/* Contact Section Styling in homepage */
+.social-icons {
+    margin-top: 3rem;
+}
+
+.socialmedia-contact a {
+    font-size: 2.5rem;
+    margin: 0 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.socialmedia-contact a:hover {
+    color: #a81681;
+}
+/* My skills */
+.My-Skills {
+    background-image: url(pink-bg.png); 
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .Aboutskills {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #a81681; 
+    font-weight: bold;
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .skill-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .skill-item h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .skill-item p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .skill-item:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+  }
+  
+  .skill-item:hover p, 
+  .skill-item:hover h2 {
+    color: #ffb6c1; 
+  }
+  
+  
+  @media (max-width: 768px) {
+    .skills-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* My educ */
+  .education-section {
+    background-image: url(pink-bg.png);
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .education-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #a81681; 
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .education-item {
+    background-color: pink;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .education-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    
+  }
+  
+  p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    
+  }
+  
+  .education-year {
+    font-size: 14px;
+    color: #a81681;
+    font-weight: bold;
+  }
+  
+  .with-honor {
+    color: #4caf50; 
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .education-container {
+      padding: 0 20px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  }
+  .education-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+   cursor: pointer;
+   background-image: url('bini-bg.png'); 
+  background-size: cover; 
+  background-position: center; 
+  }
+
+ /* General Styling this is or survey*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec; 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #a81681; 
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px; 
+    color: #a81681;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #a81681;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); 
+}
+
+.styled-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #a81681;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.styled-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #a81681; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.styled-button:hover {
+    background-color: #8e136e; 
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    color: #a81681;
+}
+
+
+.radio-group, .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-group label, .radio-group label {
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}
+/*Header design*/
+.survey-header {
+    font-size: 42px; 
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: #ff99cc; 
+    padding: 20px 0; 
+    border-radius: 15px; 
+    margin-top: 30px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    font-family: 'Arial', sans-serif; 
+    letter-spacing: 1.5px; 
+}
+.contact-header {
+    font-size: 36px; 
+    font-weight: 600; 
+    color: #a81681;
+    text-align: center;
+    margin-top: 40px; 
+    font-family: 'Arial', sans-serif; 
+    letter-spacing: 1px; 
+    border-bottom: 2px solid #a81681; 
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.portfolio-header {
+    font-size: 42px; /* Large enough to stand out */
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-image: url(bini-bg.png); 
+    padding: 25px 0;
+    border-radius: 5px; 
+    margin-top: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    font-family: 'Buffalo', sans-serif; 
+    letter-spacing: 1.5px; 
+}
+
+.Skill-header {
+    font-size: 42px; /* Large enough to stand out */
+    font-weight: bold;
+    color:  white; /* White text to contrast with the pink background */
+    text-align: center;
+    background-image: url(bini-bg.png); /* Aesthetic soft pink background */
+    padding: 25px 0; /* Space above and below */
+    border-radius: 5px; /* Rounded corners for softer look */
+    margin-top: 20px; /* Create space at the top */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Light shadow for a subtle lift effect */
+    font-family: 'Buffalo', sans-serif; /* Elegant and clean font */
+    letter-spacing: 1.5px; /* Slight spacing between letters for modern aesthetic */
+}
+.Educ-header {
+    font-size: 42px; /* Large enough to stand out */
+    font-weight: bold;
+    color: White ; /* White textH to contrast with the pink background */
+    text-align: center;
+    background-image: url(bini-bg.png); /* Aesthetic soft pink background */
+    padding: 25px 0; /* Space above and below */
+    border-radius: 5px; /* Rounded corners for softer look */
+    margin-top: 20px; /* Create space at the top */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Light shadow for a subtle lift effect */
+    font-family: 'Buffalo', sans-serif; /* Elegant and clean font */
+    letter-spacing: 1.5px; /* Slight spacing between letters for modern aesthetic */
+}
